@@ -8,5 +8,7 @@ wheels/
 
 # Virtual environments
 .venv
+.env
 
 License Plate Recognition.v11i.yolov8
+.vscode
