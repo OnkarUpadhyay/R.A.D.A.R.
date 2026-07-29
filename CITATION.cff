@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, code, or trained weights, please cite it as below."
+authors:
+  - family-names: "Upadhyay"
+    given-names: "Onkar"
+title: "R.A.D.A.R: Real-time Automatic Detection And Recognition"
+version: 1.0.0
+date-released: 2026-07-29
+url: "https://github.com/OnkarUpadhyay/R.A.D.A.R."
