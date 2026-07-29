@@ -1,6 +1,5 @@
 import cv2
 import csv
-import string
 import numpy as np
 from scipy.interpolate import interp1d
 import easyocr
@@ -14,20 +13,29 @@ reader = easyocr.Reader(['en'], gpu=True)
 # 2. Image Preprocessing & OCR Reader
 # ==========================================
 def preprocess_license_plate(plate_crop):
-    gray = cv2.cvtColor(plate_crop, cv2.COLOR_BGR2GRAY)
-    resized = cv2.resize(gray, None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC)
-    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
-    enhanced = clahe.apply(resized)
-    blurred = cv2.GaussianBlur(enhanced, (3,3), 0)
-    return blurred
+    """
+    Upgraded preprocessing: Uses bilateral filtering instead of Gaussian blur
+    to preserve sharp text edges while removing background noise.
+    """
+    license_plate_crop_gray = cv2.cvtColor(plate_crop, cv2.COLOR_BGR2GRAY)
+    _, license_plate_crop_thresh = cv2.threshold(license_plate_crop_gray, 64, 255, cv2.THRESH_BINARY_INV)
+    
+    return license_plate_crop_thresh
 
 def read_license_plate(license_plate_crop):
     """
-    Executes EasyOCR inference on GPU and returns cleaned text and score.
-    Confusion dictionaries and rigid formatting rules have been removed.
+    Executes EasyOCR with specific allowlists and magnification for high accuracy.
     """
     try:
-        detections = reader.readtext(license_plate_crop)
+        # allowlist prevents the model from predicting random symbols
+        # mag_ratio=2 upscales internally inside EasyOCR for better accuracy
+        detections = reader.readtext(
+            license_plate_crop, 
+            allowlist='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+            paragraph=False,
+            mag_ratio=2 
+        )
+        
         if not detections:
             return None, 0.0
         
@@ -38,7 +46,7 @@ def read_license_plate(license_plate_crop):
                 best_score = score
                 best_text = text
                 
-        # Clean text: keep only alphanumeric characters converted to uppercase
+        # Final clean
         clean_text = "".join(char for char in best_text if char.isalnum()).upper()
         if len(clean_text) >= 4 and len(clean_text) <= 10:
             return clean_text, float(best_score)
