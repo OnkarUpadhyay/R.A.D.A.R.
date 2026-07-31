@@ -1,15 +1,13 @@
-# R.A.D.A.R
+<h1 align="center">
+  <img
+    src="https://readme-typing-svg.herokuapp.com?size=26&duration=2500&pause=700&color=9400D3&center=true&vCenter=true&width=750&lines=📡+R.A.D.A.R;Real-time+Automatic+Detection+And+Recognition;End-to-End+Vehicle+Tracking+Pipeline;Automated+Number+Plate+Recognition;Powered+by+YOLOv8+and+EasyOCR;✨+Explore+the+code;✨+Watch+the+demo"
+    alt="Animated R.A.D.A.R welcome"
+  />
+</h1>
 
 <p align="center">
 	<img src="assets/Logo.jpg" alt="R.A.D.A.R logo" width="420">
 </p>
-
-<h1 align="center">
-  <img
-    src="https://readme-typing-svg.herokuapp.com?size=26&duration=2500&pause=700&color=00E5FF&center=true&vCenter=true&width=750&lines=📡+R.A.D.A.R;Real-time+Automatic+Detection+And+Recognition;End-to-End+Vehicle+Tracking+Pipeline;Automated+Number+Plate+Recognition;Powered+by+YOLOv8+and+EasyOCR;✨+Explore+the+code;✨+Watch+the+demo"
-    alt="Animated R.A.D.A.R welcome"
-  />
-</h1>
 
 <p align="center">
 	<img src="assets/output_gif.gif" alt="R.A.D.A.R demo animation" width="860">
