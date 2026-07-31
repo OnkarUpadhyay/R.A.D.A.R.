@@ -1,8 +1,15 @@
 # R.A.D.A.R
 
 <p align="center">
-	<img src="assets/Logo.jpg" alt="R.A.D.A.R logo" width="220">
+	<img src="assets/Logo.jpg" alt="R.A.D.A.R logo" width="860">
 </p>
+
+<h1 align="center">
+  <img
+    src="https://readme-typing-svg.herokuapp.com?size=26&duration=2500&pause=700&color=00E5FF&center=true&vCenter=true&width=750&lines=📡+R.A.D.A.R;Real-time+Automatic+Detection+And+Recognition;End-to-End+Vehicle+Tracking+Pipeline;Automated+Number+Plate+Recognition;Powered+by+YOLOv8+and+EasyOCR;✨+Explore+the+code;✨+Watch+the+demo"
+    alt="Animated R.A.D.A.R welcome"
+  />
+</h1>
 
 <p align="center">
 	<img src="assets/output_gif.gif" alt="R.A.D.A.R demo animation" width="860">
@@ -166,4 +173,3 @@ Indian Institute of Technology (IIT) Guwahati
 
 This repository includes model weights and dataset-derived assets that may have separate terms. See `LICENSE-WEIGHTS` for weight-specific licensing details.
 
-you also have to add logo.jpg from the assets folder
