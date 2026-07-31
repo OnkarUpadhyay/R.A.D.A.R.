@@ -1,7 +1,7 @@
 # R.A.D.A.R
 
 <p align="center">
-	<img src="assets/Logo.jpg" alt="R.A.D.A.R logo" width="860">
+	<img src="assets/Logo.jpg" alt="R.A.D.A.R logo" width="420">
 </p>
 
 <h1 align="center">
