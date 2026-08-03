@@ -30,8 +30,6 @@
 
 **R.A.D.A.R** is an end-to-end Automatic Number Plate Recognition (ANPR) pipeline built for noisy, real-world traffic footage. It combines YOLOv8-based vehicle tracking, a custom-trained license plate detector, OCR-based text extraction, and mathematical interpolation logic to keep detections stable across dropped frames.
 
-> **Academic Context:** This project was developed as a term project for the B.Sc. (Honours) Data Science and Artificial Intelligence program at the **Indian Institute of Technology (IIT) Guwahati**.
-
 ---
 
 ## ✨ Highlights
@@ -165,8 +163,6 @@ The custom license plate detector (`yolo26n.pt`) was trained on the **[License P
 ## 👨‍💻 Author
 
 **Onkar Upadhyay**  
-*B.Sc. (Honours), Data Science and Artificial Intelligence*  
-Indian Institute of Technology (IIT) Guwahati
 
 ---
 
